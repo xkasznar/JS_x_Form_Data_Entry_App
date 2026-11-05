@@ -1,0 +1,90 @@
+body{
+	background-color: gray;
+}
+
+h1{
+	background-color: lightsteelblue;
+	padding: 8px;
+	margin-top:-8px;
+	margin-left:-8px;
+	margin-right:-8px;
+	text-align: right;
+}
+h2, h3{
+	margin-top: 0px;
+}
+
+footer{
+	background-color: gold;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	padding: 4px;
+	text-align: left;
+}
+
+article{
+	background-color: white;
+	width: 100%;
+	min-width: 350px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 50px;
+}
+.poz-a, .poz-b, .poz-c{
+	padding: 20px;
+}
+.poz-a{
+	background-color: gold;
+	
+}
+.poz-b{
+	background-color: lightgray;
+}
+.poz-c{
+	background-color: lightsalmon;
+}
+.row{
+	width: 100%;
+	display: grid;
+	grid-template-columns: auto;
+	
+}
+.row div{
+	padding-bottom: 20px;
+}	
+#den, #mesiac, #rok{
+	width: 75px;
+}
+
+#cb-opt-exp{
+	visibility: hidden;
+}
+
+#cb-opt:checked + #cb-opt-exp{
+	visibility: visible;
+}
+#rb-opt-exp{
+	display: none;
+	margin-top: 10px;
+}
+
+	
+span{
+	color: blue;
+}
+
+@media (min-width: 576px){
+	article{
+		width: 540px;
+	}
+}
+@media (min-width: 768px){
+	article{
+		width: 720px;
+	}
+	.row{
+		grid-template-columns: auto auto;
+	}
+}

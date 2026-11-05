@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang = "sk-sk">
+	<head>
+		<meta charset="utf-8">
+		<title>Dotazník spokojnosti Cheap Taxi - Martin Kasznár</title>
+		<link href="mojecss.css" rel="stylesheet">
+	</head>
+	<body>
+		<header>
+			<h1>Dotazník spokojnosti Cheap Taxi</h1>
+		</header>
+		<article>
+			<h2>Poskytnite nám odozvu k našim službám</h2>
+			<form action="mailto:feistu02@gmail.com?subject=Martin%20Kasznár" method="post" onsubmit="return checkAll()">
+				<input type="hidden" value="Martin Kasznár" name="hb-exp">
+				<div class ="poz-a">
+					<h3>Informácie o Vás</h3>
+					<div class = "row">
+						<div>
+							<label>Dátum narodenia<span>*</span></label>
+							<input type="number" id="den" name="den" onchange="checkAge();" placeholder="deň">
+							<input type="number" id="mesiac" name="mesiac" onchange="checkAge();" placeholder="mesiac">
+							<input type="number" id="rok" name="rok" onchange="checkAge();" placeholder="rok">
+						</div>
+						<div>
+							<label>Vek<span>*</span></label>
+							<input type="number" name="vek" id="vek" onchange="checkAge();" min="1" max="121" step="1">
+						</div>
+						<div>
+							<label>E-mail<span>*</span></label>
+							<input type="email" name="email" id="email" onchange="checkEmail();" pattern = "^[A-Za-z0-9._%+-]{3,}@[a-zA-Z]{1,}([.]{1}[a-zA-Z]{2,4}|[.]{1}[a-zA-Z]{1,}[.]{1}[a-zA-Z]{2,4})$">
+						</div>
+						<div>
+							<label>Značka</label>
+							<input type="checkbox" name="cb-opt" id="cb-opt">
+							<input type="text" name="cb-opt-exp" id="cb-opt-exp" placeholder="aká?">
+						</div>
+					</div>
+				</div>
+				<br>
+				<div class ="poz-b">
+					<h3>Akú službu ste použili</h3>
+					<div class = "row">
+						<div>
+							<select id="selBranch1" onchange="selUpd1();selUpd2();" name="lineList" size="1">
+							<option value="0xx">EarthLine </option>
+							<option value="1xx">MarsLine</option>
+							</select>
+
+							<select id="selBranch2" onchange="selUpd2();" name="heightList" size="1">
+							<option value="00x">Low Earth Orbit</option>
+							<option value="01x">High Earth Orbit</option>
+							</select>
+
+							<select id="selBranch3" name="classList" size="1">
+							<option value="000">EL LEO Econ</option>
+							<option value="001">EL LEO Bsns</option>
+							</select>
+						</div>
+						<div>
+							<label>Boli ste pilotom poučení o bezpečnosti?<span>*</span></label>
+							<input onclick="rbShrink();" type="radio" id="rb-optano" name="rb-opt" value="ano">✓
+							<input onclick="rbExp();" type="radio" id="rb-optnie" name="rb-opt" value="nie">✗
+							<input type="text" name="rb-opt-exp" id="rb-opt-exp" placeholder="ID pilota?">
+						</div>
+					</div>
+				</div>
+				<br>
+				<div class ="poz-c">
+					<h3>Váš názor na naše služby<span>*</span></h3>
+					<div class = "row">
+						<div>
+							<textarea cols="40" rows="8" name="tarea-big" id="tarea-big"></textarea>
+						</div>
+						<div>
+							<label>Oznámkujte nás<span>*</span></label>
+							<input type="radio" id="rrsA" name="radio-rating" value="A">A
+							<input type="radio" id="rrsB" name="radio-rating" value="B">B
+							<input type="radio" id="rrsC" name="radio-rating" value="C">C
+							<input type="radio" id="rrsD" name="radio-rating" value="D">D
+							<input type="radio" id="rrsE" name="radio-rating" value="E">E
+							<input type="radio" id="rrsFx" name="radio-rating" value="Fx">Fx
+						</div>
+					</div>
+				</div>
+				<br>
+				<input type="submit" name ="submit" value="Odovzdať" id="odovzdavac">
+			</form>
+		</article>
+		<br><br><br>
+		<footer>
+			Tu sa nachádza dotazník spokojnosti firmy Cheap Taxi. <span>*</span> položky je povinné vyplniť.
+		</footer>
+		<script src="script.js"></script>
+	</body>
+</html>
