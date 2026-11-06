@@ -1,2 +1,5 @@
+<img width="1040" height="974" alt="image" src="https://github.com/user-attachments/assets/005f1588-c587-4f25-8c13-bc3b1f7f2106" />
+
+
 This program is possible to run in regular browser and host a JavaScript server easily with Python 3 with command: python -m http.server 8000 to then navigate to http://localhost:8000/ to find index.html on harddisk.
 
